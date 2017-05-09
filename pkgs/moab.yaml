@@ -1,0 +1,22 @@
+extends: [cmake_package]
+dependencies:
+  build: [hdf5, netcdf4]
+
+sources:
+- url: http://www.computationalmodelbuilder.org/files/dependencies/moab-17bf5518c4e6585a824edf06bc31902baf9ad045.tar.bz2
+  key: tar.bz2:qlkbxauizij3to36o3gcyjeiotg6knhr
+
+defaults:
+  relocatable: true
+
+build_stages:
+- name: configure
+  extra: ['-D BUILD_SHARED_LIBS:BOOL=ON',
+             '-D MOAB_USE_SZIP:BOOL=ON',
+             '-D MOAB_USE_CGM:BOOL=OFF',
+             '-D MOAB_USE_CGNS:BOOL=OFF',
+             '-D MOAB_USE_MPI:BOOL=OFF',
+             '-D MOAB_USE_HDF:BOOL=ON',
+             '-D ENABLE_HDF5:BOOL=ON',
+             '-D MOAB_USE_NETCDF:BOOL=ON',
+             '-D MOAB_ENABLE_TESTING:BOOL=ON']

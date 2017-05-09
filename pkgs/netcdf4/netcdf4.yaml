@@ -15,9 +15,14 @@ build_stages:
 
 - name: set_mpi_wrapper
   handler: bash
-  before: configure 
+  before: configure
   bash: |
     export CC=$MPICC
+
+- when: platform == 'Darwin'
+  name: configure
+  mode: override
+  extra: ['--enable-shared']
 
 - when: machine == 'CrayXE6'
   name: configure
