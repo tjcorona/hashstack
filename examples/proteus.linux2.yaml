@@ -14,6 +14,7 @@ extends:
 # profile.
 
 packages:
+  recordtype:
 #  clawpack:
   launcher:
   cmake:
@@ -81,15 +82,13 @@ packages:
   pexpect:
   pcs_api:
   zoltan:
-    build_with: |
-      parmetis
   chrono:
   pytest:
   pytest-xdist:
   doxygen:
   gmsh:
   scorec:
-  #matplotlib:
+  matplotlib:
   sphinx:
   sphinx-bootstrap-theme:
   pyzmq:
@@ -119,3 +118,4 @@ packages:
   #ipywidgets:
   #ipyleaflet:
   #pythreejs:
+  #proteus:
