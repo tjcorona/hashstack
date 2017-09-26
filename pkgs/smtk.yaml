@@ -1,6 +1,6 @@
 extends: [cmake_package]
 dependencies:
-  build: [boost, hdf5, netcdf4, pybind11, python, remus]
+  build: [boost, hdf5, netcdf4, pybind11, python, remus, zmq]
 
 sources:
 - url: https://gitlab.kitware.com/cmb/smtk.git
