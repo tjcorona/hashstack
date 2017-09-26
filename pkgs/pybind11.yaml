@@ -1,0 +1,17 @@
+extends: [cmake_package]
+dependencies:
+  build: [python]
+
+sources:
+- url: https://github.com/pybind/pybind11
+  key: git:a22dd2d1dfa84b6122fa55a37da58fd7726f816d
+
+defaults:
+  relocatable: true
+
+build_stages:
+- name: configure
+  extra: ['-D PYBIND11_TEST:BOOL=OFF',
+             '-D PYTHON_LIBRARY:FILEPATH=${PYTHON_DIR}/lib/libpython2.7.dylib',
+             '-D PYTHON_EXECUTABLE:FILEPATH=${PYTHON_DIR}/bin/python2.7',
+             '-D PYTHON_INCLUDE_DIR:PATH=${PYTHON_DIR}/include/python2.7']
