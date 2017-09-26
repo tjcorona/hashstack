@@ -73,6 +73,7 @@ packages:
   netcdf4:
   netcdf4cpp:
   python-netcdf4:
+  smtk:
   h5py:
   ode:
   openblas:
