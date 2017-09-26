@@ -5,7 +5,7 @@ dependencies:
 
 sources:
 - key: tar.gz:mcma4rdhnp7empg5ewbozwwmbmdwhmsz
-  url: https://sourceforge.net/projects/pytables/files/pytables/3.2.0/tables-3.2.0.tar.gz
+  url: https://data.kitware.com/api/v1/file/59ca77388d777f7d33e9d92d/download
 
 build_stages:
 - name: install
